@@ -6,7 +6,7 @@ var twitter = require('../libs/twitter');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   if (!req.session.auth || !req.session.auth.accessToken) {
-    res.send('login!');
+    res.send('<a href="/users/login">login</a>');
     return;
   }
 
